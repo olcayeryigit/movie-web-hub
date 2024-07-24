@@ -30,7 +30,6 @@ const Movies = () => {
   const { pathname } = useLocation();
   const[showScroll,setShowScroll]=useState();
   //
- const sessionData = JSON.parse(localStorage.getItem("sessionData"));
 
   const upScroll = () => {
     window.scrollTo({

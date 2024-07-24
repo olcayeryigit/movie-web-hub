@@ -119,7 +119,7 @@ isScroll();
   //console.log(imdb);
   //console.log(popular);
   //console.log(upcoming);
- if((currentUser&&sessionData)||(!sessionData)) return (
+ return (
     <Container className="mb-3">
       {(pathname == "/movies" ||
         pathname == "/imdb" ||

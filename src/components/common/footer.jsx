@@ -5,7 +5,7 @@ const Footer = () => {
   const {pathname}=useLocation();
   if(pathname!="/registrationSuccessful"&&pathname!="/registrationFailed")
     return (
-      <footer className="bg-black text-white p-3">&copy; Copyright</footer>
+      <footer className="bg-black text-white mt-3 mt-sm-0 py-4 py-sm-3 ps-3" >&copy; Copyright</footer>
   )
 }
 

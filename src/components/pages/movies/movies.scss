@@ -3,16 +3,16 @@
 @media (min-width: 1035px) {
   .scrollTop {
     position: fixed;
-    top: 22vh; /* Üstten 10 piksel boşluk */
-    right: 2%; /* Sağdan 10 piksel boşluk */
+    top: 22vh; 
+    right: 2%; 
   }
 }
 
 @media (min-width: 1035px) {
   .scrollBottom {
     position: fixed;
-    top: 88vh; /* Üstten 10 piksel boşluk */
-    right: 2%; /* Sağdan 10 piksel boşluk */
+    bottom: 18vh; 
+    right: 2%; 
   }
 }
 
@@ -20,16 +20,16 @@
  @media (min-width: 992px) and (max-width:1035px) {
     .scrollTop {
         position: fixed;
-        top: 22.5vh; /* Üstten 10 piksel boşluk */
-        right: 0.2%; /* Sağdan 10 piksel boşluk */
+        top: 23vh; 
+        right: 0.2%; 
       }
 }
 
 @media (min-width: 992px) and (max-width: 1035px) {
     .scrollBottom {
         position: fixed;
-        top: 88vh; /* Üstten 10 piksel boşluk */
-        right: 0.2%; /* Sağdan 10 piksel boşluk */
+        bottom: 15vh; 
+        right: 0.2%; 
       }
 }
 
@@ -38,16 +38,16 @@
  @media (min-width: 768px) and (max-width: 991px) {
     .scrollTop {
         position: fixed;
-        top: 12vh; /* Üstten 10 piksel boşluk */
-        right: 1%; /* Sağdan 10 piksel boşluk */
+        top: 14vh; 
+        right: 1.5%; 
       }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
     .scrollBottom {
         position: fixed;
-        top: 95vh; /* Üstten 10 piksel boşluk */
-        right: 1%; /* Sağdan 10 piksel boşluk */
+        bottom: 10vh; 
+        right: 1.5%; 
       }
 }
 
@@ -56,16 +56,16 @@
     @media (min-width: 412px) and (max-width:767px) {
         .scrollTop {
             position: fixed;
-            top: 33vh; /* Üstten 10 piksel boşluk */
-            right: 8%; /* Sağdan 10 piksel boşluk */
+            top: 38vh; 
+            right: 8%; 
           }
     }
 
     @media (min-width: 412px) and (max-width:767px) {
          .scrollBottom {
         position: fixed;
-        top: 90.5vh; /* Üstten 10 piksel boşluk */
-        right: 8%; /* Sağdan 10 piksel boşluk */
+        bottom: 12vh; 
+        right: 8%; 
       }
     }
 
@@ -75,15 +75,15 @@
     @media (max-width:411px) {
       .scrollTop {
           position: fixed;
-          top: 33vh; /* Üstten 10 piksel boşluk */
-          right: 8%; /* Sağdan 10 piksel boşluk */
+          top: 42vh; 
+          right: 8%; 
         }
   }
 
   @media  (max-width:411px) {
        .scrollBottom {
       position: fixed;
-      top: 90.5vh; /* Üstten 10 piksel boşluk */
+      bottom: 8vh; /* Üstten 10 piksel boşluk */
       right: 8%; /* Sağdan 10 piksel boşluk */
     }
   }

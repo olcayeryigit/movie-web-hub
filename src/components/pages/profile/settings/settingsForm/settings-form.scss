@@ -1,0 +1,81 @@
+.editFormContainer {
+  background-color: #b8b8b8;
+
+
+
+  .formEdit {
+   width: 27rem;
+    height: auto;
+    background-color: #d6d6d5;
+
+.userImage{
+width:5rem;
+height: 5rem;
+object-fit:contain;
+background-color: #d6d6d5;
+}
+
+
+
+
+ 
+
+
+    .editLabel2 {
+      background-color: #d6d6d5;
+      color: rgb(0, 0, 0);
+      width: 7rem;
+      height: 2.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      font-size: 15px;
+      padding-left: 12px;
+    }
+
+    .editLabel {
+      width: 13rem;
+      height: 2.2rem;
+      font-size: 15px;
+      padding-left: 12px;
+      background-color: #d6d6d5;
+      .editİcon {
+        background-color: #d6d6d5;
+      }
+    }
+    .editFormControl {
+      width: 13rem;
+      height: 2.2rem;
+    }
+    .editFormControlPassword {
+      width: 11rem;
+      height: 2.2rem;
+      &:focus {
+        box-shadow: 0 0 0px;
+      }
+    }
+
+    .hideShowButton {
+      height: 2.2rem;
+    }
+
+    .groupDelete {
+      background-color: #d6d6d5;
+      width: 20.8rem;
+      font-size: 15px;
+
+      .deleteFormControl {
+        height: 2.2rem;
+
+        &:focus {
+          box-shadow: 0 0 0px;
+        }
+      }
+    }
+  }
+
+  .formText {
+    font-size: 11px;
+    width: 12rem;
+  }
+}

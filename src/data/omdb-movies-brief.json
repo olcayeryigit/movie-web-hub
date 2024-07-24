@@ -1,0 +1,669 @@
+[
+  {
+    "id": 0,
+    "Title": "Mr. Robot: Behind the Mask",
+    "Year": "2017",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BYTJlZjAzMmMtOGI3OC00MmYwLWEwYjUtMmQwZWI2YTA1YWE5XkEyXkFqcGdeQXVyNTkyMDAwNzQ@._V1_SX300.jpg",
+    "RunTime": "1h 30m"
+  },
+
+  {
+    "id": 1,
+    "Title": "The Shawshank Redemption",
+    "Year": "1994",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://www.roguecinema.com/wp-content/uploads/2018/08/the-shawshank-redemption.jpg",
+    "RunTime": "2h 22m"
+  },
+  
+  {
+    "id": 2,
+    "Title": "Return to Source: Philosophy & The Matrix",
+    "Year": "2004",
+    "imdbID": "tt0439783",
+    "Type": "movie",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BODIwNDQ3MTYtMWZiYS00MDYyLWI4ZGEtZjBkODU4NTgyNDFkXkEyXkFqcGdeQXVyMjM3ODA2NDQ@._V1_SX300.jpg",
+    "RunTime": "1h 1m"
+  },
+
+  {
+    "id": 3,
+    "Title": "Modern Times",
+    "Year": "1936",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu_P8YHRtCb35ujdVEhaUljuv5ODnF3ANL8A&s",
+    "RunTime": "1h 27m"
+  },
+  {
+    "id": 4,
+    "Title": "The Godfather Part II",
+    "Year": "1974",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://tr.web.img4.acsta.net/pictures/bzp/01/28201.jpg",
+    "RunTime": "3h 22m"
+  },
+
+  {
+    "id": 5,
+    "Title": "12 Angry Men",
+    "Year": "1957",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://upload.wikimedia.org/wikipedia/tr/8/8b/12_k%C4%B1zg%C4%B1n_adam.jpg",
+    "RunTime": "1h 36m"
+  },
+  {
+    "id": 6,
+    "Title": "Swan Song",
+    "Year": "2023",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://images.ctfassets.net/22n7d68fswlw/4UDZDEM6k9H9PqobU9y9lK/e77387bc087165529e0cd93a05469f0a/SwanSong_Poster.jpg",
+    "RunTime": "1h 37m",
+    "UpcomingTime": "Jul 26, 2024"
+  },
+  
+  {
+    "id": 7,
+    "Title": "The Lion King",
+    "Year": "1994",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm-_mcJr_ycTRAOsXCQcQX2ykq7E66Hp67pg&s",
+    "RunTime": "1h 28m"
+  },
+  {
+    "id": 8,
+    "Title": "Pulp Fiction",
+    "Year": "1994",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://m.media-amazon.com/images/I/81UTs3sC5hL._AC_UF1000,1000_QL80_.jpg",
+    "RunTime": "2h 34m"
+  },
+  {
+    "id": 9,
+    "Title": "The Lord of the Rings: The Fellowship of the Ring",
+    "Year": "2001",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p28828_p_v8_ao.jpg",
+    "RunTime": "2h 58m"
+  },  {
+    "id": 10,
+    "Title": "The Story of Tom and Jerry",
+    "Year": "2024",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJv3D0mobEekO25qmLO6KflXQhUtNLWOlEf45_Ax3JYEmRNVzI5rbiQ7s6qo2bCVS9NRY&usqp=CAU",
+    "RunTime": "1h 37m",
+    "UpcomingTime": "Jul 23, 2024"
+  },
+  
+  {
+    "id": 11,
+    "Title": "Forrest Gump",
+    "Year": "1994",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://tr.web.img4.acsta.net/pictures/bzp/01/10568.jpg",
+    "RunTime": "2h 22m"
+  },
+  {
+    "id": 12,
+    "Title": "The Lord of the Rings: The Two Towers",
+    "Year": "2002",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://m.media-amazon.com/images/I/91TysmFLLyL._AC_UF894,1000_QL80_.jpg",
+    "RunTime": "2h 59m"
+  },
+  {
+    "id": 13,
+    "Title": "Fight Club",
+    "Year": "1999",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvGzbwGCu1FCcpOBcdbEunfRp1L84yY3QivQ&s",
+    "RunTime": "2h 19m"
+  },
+  {
+    "id": 14,
+    "Title": "Deadpool & Wolverine",
+    "Year": "2024",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkENwmBxsakg0SaYzSoOy7iLyixjwkMc5kfg&s",
+    "RunTime": "2h 7m",
+    "UpcomingTime": "Jul 26, 2024"
+  },
+  
+  {
+    "id": 15,
+    "Title": "Star Wars: Episode V - The Empire Strikes Back",
+    "Year": "1980",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnziGZQauKGDsEQF6eeoUFiZ1mp_W_GETkHg&s",
+    "RunTime": "2h 4m"
+  },
+
+  {
+    "id": 16,
+    "Title": "The Matrix",
+    "Year": "1999",
+    "imdbID": "tt0133093",
+    "Type": "movie",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
+    "RunTime": "2h 16m"
+  },
+  {
+    "id": 17,
+    "Title": "Goodfellas",
+    "Year": "1990",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://tr.web.img4.acsta.net/pictures/bzp/01/5969.jpg",
+    "RunTime": "2h 25m"
+  },
+
+  {
+    "id": 18,
+    "Title": "Kalki 2898 AD",
+    "Year": "2024",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTok_x75Zd0zCF1z71UpJPORigyc_KhrsuTdg&s",
+    "RunTime": "3h"
+  },
+  {
+    "id": 19,
+    "Title": "Se7en",
+    "Year": "1995",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs-dPV7zGHOWMR6ZGgNsTzdB4ksSDolJktcg&s",
+    "RunTime": "2h 7m"
+  },
+  {
+    "id": 20,
+    "Title": "Casablanca",
+    "Year": "1942",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxBOgMXGhajeU9WBe6CVINduY0I3rQ3_ZWBQ&s",
+    "RunTime": "1h 42m"
+  },
+  {
+    "id": 21,
+    "Title": "It's a Wonderful Life",
+    "Year": "1946",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWEeobYHJv_tZ-gg-iBFdWlfYlIhl_akExOQ&s",
+    "RunTime": "2h 10m"
+  },
+
+  {
+    "id": 22,
+    "Title": "Seven Samurai",
+    "Year": "1954",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT4kaoqFhvBVSbbbRieJppvPaKoJQrfgG2QA&s",
+    "RunTime": "3h 27m"
+  },
+
+  {
+    "id": 23,
+    "Title": "The Silence of the Lambs",
+    "Year": "1991",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwGft1RbqMA9BowryLFEnkjA_tctT2LWq80w&s",
+    "RunTime": "1h 58m"
+  },
+  {
+    "id": 24,
+    "Title": "Dune: Part Two",
+    "Year": "2024",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5ogMNgNIYpbWhsMv84GAxFR2tE7-Yd1zFrw&s",
+    "RunTime": "2h 46m"
+  },
+
+
+  {
+    "id": 25,
+    "Title": "City of God",
+    "Year": "2002",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjMoFzYYxbhnDmqhJUe2Cq1onDOzuIIKmW0A&s",
+    "RunTime": "2h 10m"
+  },
+  {
+    "id": 26,
+    "Title": "Life Is Beautiful",
+    "Year": "1997",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyNrj482JIi2tI91FkycBCbRv38qJySDSb6w&s",
+    "RunTime": "1h 56"
+  },
+  {
+    "id": 27,
+    "Title": "MaXXXine",
+    "Year": "2024",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7BZL9O9kwmnJggP0GkK7JxoL1cMZ1xHTk-Q&s",
+    "RunTime": "1h 43m"
+  },
+
+  {
+    "id": 28,
+    "Title": "Terminator 2: Judgment Day",
+    "Year": "1991",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe-jAGnct5YQiuEcRM0tUY5i3Z_gdvbYXa7Q&s",
+    "RunTime": "2h 17m"
+  },
+  {
+    "id": 29,
+    "Title": "Star Wars: Episode IV - A New Hope",
+    "Year": "1977",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6rA6awj1t1YEsd9kJQDcBfrGzl4avVzXy9A&s",
+    "RunTime": "2h 1m"
+  },
+  {
+    "id": 30,
+    "Title": "Back to the Future",
+    "Year": "1985",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1bK1nzz8Xbc-N5NRWkBMFqALIjoNxeICwckdYN4Fws_EeQ1cuWctauGgLxalAe5xgQ1M&usqp=CAU",
+    "RunTime": "1h 56m"
+  },
+  {
+    "id": 31,
+    "Title": "Spirited Away",
+    "Year": "2001",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw1ZYurrAQihYEoDdDOFxNkoG3bYJPRIJDGA&s",
+    "RunTime": "2h 5m"
+  },
+  {
+    "id": 32,
+    "Title": "The Pianist",
+    "Year": "2002",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpJie1MOBNOjM5Iv1ik81xtuVQV6gkw9jBFQ&s",
+    "RunTime": "2h 30m"
+  },
+  {
+    "id": 33,
+    "Title": "Parasite",
+    "Year": "2019",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3nX7VeEXYBOVxpuToK77Ttg7gKaxuM7Z__Q&s",
+    "RunTime": "2h 12m"
+  },
+  {
+    "id": 34,
+    "Title": "Psycho",
+    "Year": "1960",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDE2f84EcjNxfXN_fXEF8lq3i7ehKKMyEhbw&s",
+    "RunTime": "1h 49m"
+  },
+  {
+    "id": 35,
+    "Title": "Gladiator",
+    "Year": "2000",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuPzAugQbbY6TuDDMlpEb-KO6haa7gZ3YhDw&s",
+    "RunTime": "1h 30m"
+  },
+
+  {
+    "id": 36,
+    "Title": "Bill Maher: Crazy Stupid Politics ",
+    "Year": "2012",
+    "imdbID": "tt2266679",
+    "Type": "movie",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BZjYxZTc0MTQtMTJiYi00MmZiLWJlN2UtMDQwZjkwYzJiMmJjL2ltYWdlXkEyXkFqcGdeQXVyMTM3NzQ5NzQ@._V1_SX300.jpg",
+    "RunTime": "1h 1m"
+  },
+  {
+    "id": 37,
+    "Title": "Inside Out 2",
+    "Year": "2024",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-7c0MPK1GrYiduqayC-2_35BQiCJCtYWvUA&s",
+    "RunTime": "1h 36m"
+  },
+  
+  {
+    "id": 38,
+    "Title": "Spider-Man: Across the Spider-Verse",
+    "Year": "2023",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR54Yhm23k0ipvm__ymv-An0nMrwiCOehyIMg&s",
+    "RunTime": "2h 20m"
+  },
+  {
+    "id": 39,
+    "Title": "The Departed",
+    "Year": "2006",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyYBsGPv35mHw2KQjZcQ4MDmR3wEwahs5YHg&s",
+    "RunTime": "2h 31m"
+  },
+  {
+    "id": 40,
+    "Title": "Léon: The Professional",
+    "Year": "1994",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi-LvaJmsDRKMZe5EP1IIcT2opgWQHySFyZw&s",
+    "RunTime": "1h 50m"
+  },
+  {
+    "id": 41,
+    "Title": "American History X",
+    "Year": "1998",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjGejKeUypjH06ULchT-bk3JeAPbX8krTjCg&s",
+    "RunTime": "1h 59m"
+  },
+  {
+    "id": 42,
+    "Title": "Whiplash",
+    "Year": "2014",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz87hLd5OGvbNRJlExETWzlVw4WPcbtT1mbg&s",
+    "RunTime": "1h 46m"
+  },
+  {
+    "id": 43,
+    "Title": "The Prestige",
+    "Year": "2006",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5iAKA8m2r36ziNM2l4fQhc-qI4AYk6GOXRQ&s",
+    "RunTime": "2h 10m"
+  },
+  {
+    "id": 44,
+    "Title": "Grave of the Fireflies",
+    "Year": "1988",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa3KvbaiWbkO7FMZfNGXK0Xz9rI81o_bwUVQ&s",
+    "RunTime": "1h 29m"
+  },
+  {
+    "id": 45,
+    "Title": "Harakiri",
+    "Year": "1962",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlffbyrMA8L-gg6kLbBcSGBZJt_G0xxPltWg&s",
+    "RunTime": "2h 13m"
+  },
+  {
+    "id": 46,
+    "Title": "The Usual Suspects",
+    "Year": "1995",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh_8QMlBzlGcheYM_xNaXyQ-CpL2lDW1DKvg&s",
+    "RunTime": "1h 46m"
+  },
+  {
+    "id": 47,
+    "Title": "Interstellar",
+    "Year": "2014",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYODVRD4gnfW3heEo-BV5rIsd_lxJyWlemEQ&s",
+    "RunTime": "2h 49m"
+  },
+  {
+    "id": 48,
+    "Title": "The Intouchables",
+    "Year": "2011",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIWh2AxsVYPyYUmaZ6lIwerodBX4z_4Yg8fw&s",
+    "RunTime": "1h 52m"
+  },
+  {
+    "id": 49,
+    "Title": "Cinema Paradiso",
+    "Year": "1988",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIwsMdl3gQjYHdPTguoUW6IYh195xPqF2kVg&s",
+    "RunTime": "2h 54m"
+  },  
+  {
+    "id": 50,
+    "Title": "A Quiet Place: Day One",
+    "Year": "2024",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTj8OFM6pxioM1GcVh70F3EUpSwzgY9lev8Q&s",
+    "RunTime": "1h 39m"
+  },
+  
+  {
+    "id": 51,
+    "Title": "Longlegs",
+    "Year": "2024",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG31VGvcNc02aoikuJ_OljeE9FqLfPx1w84Q&s",
+    "RunTime": "1h 41m"
+  },
+  {
+    "id": 52,
+    "Title": "Beverly Hills Cop: Axel F",
+    "Year": "2024",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6AILloUfpQcYKw-9rWnEKLUT9GIV8DGeyaA&s",
+    "RunTime": "1h 58m"
+  },
+  {
+    "id": 53,
+    "Title": "The Green Mile",
+    "Year": "1999",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKbu5UNPpL9Nv4qu8uQoV_VDpfdpjtTd1agw&s",
+    "RunTime": "3h 9m"},
+
+    {
+      "id": 54,
+      "Title": "The Lord of the Rings: The Return of the King",
+      "Year": "2003",
+      "imdbID": "tt6604064",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/I/81+YmsWr5+L._AC_UF894,1000_QL80_.jpg",
+      "RunTime": "3h 21m"
+    },
+    {
+      "id": 55,
+      "Title": "The Dark Knight",
+      "Year": "2008",
+      "imdbID": "tt6604064",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/I/71qE+TogE1L._AC_SY500_.jpg",
+      "RunTime": "2h 32m"
+    },
+  {
+    "id": 56,
+    "Title": "Despicable Me 4",
+    "Year": "2024",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrP0zZlC_A6OZiqn28TVDxnc5p3bB-pwoZWw&s",
+    "RunTime": "1h 34m"
+  },
+  {
+    "id": 57,
+    "Title": "One Flew Over the Cuckoo's Nest",
+    "Year": "1975",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtNeKaDTcRfXeR2M8MFhe8xCmxTwyzCpogLA&s",
+    "RunTime": "2h 13m"
+  },
+  {
+    "id": 58,
+    "Title": "Twisters",
+    "Year": "2024",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_v_5ogfPr7l_6NUuVVm3vV73db6z1LV-MsA&s",
+    "RunTime": "2h 2m"
+  },
+  {
+    "id": 59,
+    "Title": "The Good, the Bad and the Ugly",
+    "Year": "1966",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://m.media-amazon.com/images/I/71HA2V6PaTL._AC_UF894,1000_QL80_.jpg",
+    "RunTime": "2h 58m"
+  },
+  {
+    "id": 60,
+    "Title": "Inception",
+    "Year": "2010",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZULo4wW4HgSb2zhgtsWFowrM1dTJq-B865A&s",
+    "RunTime": "2h 28m"
+  },
+  {
+    "id": 61,
+    "Title": "  The Fabulous Four",
+    "Year": "2024",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMbyrbxxhkrTynKmFdJNmdn1WVV1FrYjKawv-Ug5BlVI6G7-AKy_007JmEHeq1_EvgR9g&usqp=CAU",
+    "RunTime": "1h 39m",
+    "UpcomingTime": "Jul 26, 2024"
+  },
+  {
+    "id": 62,
+    "Title": "Dìdi",
+    "Year": "2024",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMGY1NTljNjMtZmFlMi00NTMzLTg5MzYtYzNlOThlNTdjZjZjXkEyXkFqcGc@._V1_QL75_UX190_CR0,0,190,281_.jpg",
+    "RunTime": "1h 34m",
+    "UpcomingTime": "Jul 26, 2024"
+  },
+  {
+    "id": 63,
+    "Title": "Schindler's List",
+    "Year": "1993",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://tr.web.img4.acsta.net/medias/nmedia/18/66/03/76/18979736.jpg",
+    "RunTime": "3h 15m"
+  },
+  {
+    "id": 64,
+    "Title": "The Duel",
+    "Year": "2023",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGXbqa8dirFHoc1Wy1yMZ53hRMof8D7iGsYjR60nGaekTdEbeLdxZHQFc8HjKcs5ALCw&usqp=CAU",
+    "RunTime": "1h 35m",
+    "UpcomingTime": "Jul 31, 2024"
+  },
+  {
+    "id": 65,
+    "Title": "Trap",
+    "Year": "2024",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCtnfazk0BzTo1gh5ftU3U3PGai2Jp5OilpQ&s",
+    "RunTime": "1h 45m",
+    "UpcomingTime": "Aug 02, 2024"
+  },
+  {
+    "id": 66,
+    "Title": "Sing Sing",
+    "Year": "2023",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYLwg07TB5EWUnmcEG14F3Fu77bRWXjqSEk7az1rjpPSQvTVkq41YZyxoUxO_GFK6MBg&usqp=CAU",
+    "RunTime": "1h 45m",
+    "UpcomingTime": "Aug 02, 2024"
+  },
+  {
+    "id": 68,
+    "Title": "The Matrix Revolutions",
+    "Year": "2003",
+    "imdbID": "tt0242653",
+    "Type": "movie",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BNzNlZTZjMDctZjYwNi00NzljLWIwN2QtZWZmYmJiYzQ0MTk2XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg",
+    "RunTime": "2h 9m"
+  },
+
+  {
+    "id": 69,
+    "Title": "Armitage III: Dual Matrix",
+    "Year": "2001",
+    "imdbID": "tt0303678",
+    "Type": "movie",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BOTUwOTY3Mjg1MF5BMl5BanBnXkFtZTcwODI2MTAyMQ@@._V1_SX300.jpg",
+    "RunTime": "1h 30m"
+  },
+  {
+    "id": 70,
+    "Title": "The Godfather",
+    "Year": "1972",
+    "imdbID": "tt4158110",
+    "Type": "movie",
+    "Poster": "https://s3.cloud.ngn.com.tr/kitantik/images/2020-05-17/0z8kgltka9l9fu21pwk.jpg",
+    "RunTime": "2h 55m"
+  },
+ 
+
+  
+  {
+    "id": 71,
+    "Title": "Saving Private Ryan",
+    "Year": "1998",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW1U3YDHSokGO9Ka89_VLjAD18CrXyZR_pIQ&s",
+    "RunTime": "2h 49m"
+  }
+]

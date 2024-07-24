@@ -1,0 +1,24 @@
+.homeContainer {
+  background-color: rgb(48, 53, 56);
+  padding: 1% 3%;
+
+  .carouselContainer {
+    background-color: rgb(0, 0, 0);
+
+    .carouselSlide {
+      background-color: #000000;
+      .carouselImg {
+        background-color: aliceblue;
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+        height: 73vh;
+      }
+    }
+
+    .homeText {
+      width: 14rem;
+      top: 55%;
+      right: 14%;
+    }
+  }
+}

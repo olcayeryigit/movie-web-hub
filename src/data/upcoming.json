@@ -1,0 +1,83 @@
+[
+  {
+    "id": 59,
+    "Title": "The Story of Tom and Jerry",
+    "Year": "2024",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJv3D0mobEekO25qmLO6KflXQhUtNLWOlEf45_Ax3JYEmRNVzI5rbiQ7s6qo2bCVS9NRY&usqp=CAU",
+    "RunTime": "1h 37m",
+    "UpcomingTime": "Jul 23, 2024"
+  },
+  {
+    "id": 60,
+    "Title": "Deadpool & Wolverine",
+    "Year": "2024",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkENwmBxsakg0SaYzSoOy7iLyixjwkMc5kfg&s",
+    "RunTime": "2h 7m",
+    "UpcomingTime": "Jul 26, 2024"
+  },
+  {
+    "id": 61,
+    "Title": "  The Fabulous Four",
+    "Year": "2024",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMbyrbxxhkrTynKmFdJNmdn1WVV1FrYjKawv-Ug5BlVI6G7-AKy_007JmEHeq1_EvgR9g&usqp=CAU",
+    "RunTime": "1h 39m",
+    "UpcomingTime": "Jul 26, 2024"
+  },
+  {
+    "id": 62,
+    "Title": "Dìdi",
+    "Year": "2024",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMGY1NTljNjMtZmFlMi00NTMzLTg5MzYtYzNlOThlNTdjZjZjXkEyXkFqcGc@._V1_QL75_UX190_CR0,0,190,281_.jpg",
+    "RunTime": "1h 34m",
+    "UpcomingTime": "Jul 26, 2024"
+  },
+  {
+    "id": 63,
+    "Title": "Swan Song",
+    "Year": "2023",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://images.ctfassets.net/22n7d68fswlw/4UDZDEM6k9H9PqobU9y9lK/e77387bc087165529e0cd93a05469f0a/SwanSong_Poster.jpg",
+    "RunTime": "1h 37m",
+    "UpcomingTime": "Jul 26, 2024"
+  },
+  {
+    "id": 64,
+    "Title": "The Duel",
+    "Year": "2023",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGXbqa8dirFHoc1Wy1yMZ53hRMof8D7iGsYjR60nGaekTdEbeLdxZHQFc8HjKcs5ALCw&usqp=CAU",
+    "RunTime": "1h 35m",
+    "UpcomingTime": "Jul 31, 2024"
+  },
+  {
+    "id": 65,
+    "Title": "Trap",
+    "Year": "2024",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCtnfazk0BzTo1gh5ftU3U3PGai2Jp5OilpQ&s",
+    "RunTime": "1h 45m",
+    "UpcomingTime": "Aug 02, 2024"
+  },
+  {
+    "id": 66,
+    "Title": "Sing Sing",
+    "Year": "2023",
+    "imdbID": "tt6604064",
+    "Type": "movie",
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYLwg07TB5EWUnmcEG14F3Fu77bRWXjqSEk7az1rjpPSQvTVkq41YZyxoUxO_GFK6MBg&usqp=CAU",
+    "RunTime": "1h 45m",
+    "UpcomingTime": "Aug 02, 2024" 
+   }
+    
+]

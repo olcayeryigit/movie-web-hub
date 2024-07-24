@@ -38,7 +38,7 @@ function App() {
   const [update2, setUpdate2] = useState(false);
   //
   const [IsTimeout, setIsTimeOut] = useState(false);
-  const [suv, setSuv] = useState(null);
+  const [registeredUserLogin, setRegisteredUserLogin] = useState(null);
 
   let sessionData = JSON.parse(localStorage.getItem("sessionData"));
 
@@ -69,33 +69,29 @@ function App() {
     };
 
     fetchingUsersOperation();
-  }, [
-    isWentRegistrationPage,
+  }, [isWentRegistrationPage,
     isWentLoginPage,
     isNeedInHeader,
     update,
     update2,
-    signUpUserName,
-  ]);
+    signUpUserName,]);
 
   useEffect(() => {
-    if (signUpUserName&&currentUsers) {
+    if (signUpUserName && currentUsers) {
       console.log(signUpUserName);
       console.log(currentUsers);
-      const sUU = currentUsers.filter(
+      const registeredCurrentUser = currentUsers.filter(
         (item) => item.userName == signUpUserName
       );
-      setSuv(sUU);
-
+      setRegisteredUserLogin(registeredCurrentUser);
     }
   }, [currentUsers, signUpUserName]);
 
   // console.log(sessionData);
 
-
   useEffect(() => {
-    if (suv && suv.length > 0) {
-      const user = suv[0];
+    if (registeredUserLogin && registeredUserLogin.length > 0) {
+      const user = registeredUserLogin[0];
       const sessionDt = {
         userN: user.userName,
         password: user.password,
@@ -106,12 +102,7 @@ function App() {
       localStorage.setItem("sessionData", JSON.stringify(sessionDt));
       console.log(sessionDt);
     }
-  }, [suv]);
-
-
-
-
-
+  }, [registeredUserLogin]);
 
   useEffect(() => {
     sessionData = JSON.parse(localStorage.getItem("sessionData"));
@@ -125,7 +116,7 @@ function App() {
       });
     }
     //   console.log(currentUser);
-  }, [currentUsers, signUpUserName,suv]);
+  }, [currentUsers, signUpUserName, registeredUserLogin]);
 
   useEffect(() => {
     let userMov = movies;

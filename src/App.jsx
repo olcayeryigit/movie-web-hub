@@ -1,6 +1,6 @@
 import AppRouter from "./router";
 import StoreContext from "./store";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { getAllUSer } from "./helper/api";
 import data from "./data/omdb-movies-brief.json";
 import { allMovies } from "./helper/data";
@@ -41,8 +41,8 @@ function App() {
   const [registeredUserLogin, setRegisteredUserLogin] = useState(null);
 
   let sessionData = JSON.parse(localStorage.getItem("sessionData"));
-
-  const dataMovies = allMovies(data);
+//useMemo ile hafızaya alma
+  const dataMovies = useMemo(() => allMovies(data), [data]);
   //console.log(dataMovies);
   useEffect(() => {
     setMovies(dataMovies);
@@ -139,7 +139,7 @@ function App() {
       //  console.log(userMov);
       setUserFilms(userMov);
     }
-  }, [currentUser]);
+  }, [currentUser,registeredUserLogin]);
 
   //begendigim filmler
 

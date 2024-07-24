@@ -30,6 +30,7 @@ const Movies = () => {
   const { pathname } = useLocation();
   const[showScroll,setShowScroll]=useState();
   //
+ const sessionData = JSON.parse(localStorage.getItem("sessionData"));
 
   const upScroll = () => {
     window.scrollTo({
@@ -118,7 +119,7 @@ isScroll();
   //console.log(imdb);
   //console.log(popular);
   //console.log(upcoming);
-  return (
+ if((currentUser&&sessionData)||(!sessionData)) return (
     <Container className="mb-3">
       {(pathname == "/movies" ||
         pathname == "/imdb" ||

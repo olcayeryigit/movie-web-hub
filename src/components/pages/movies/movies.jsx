@@ -25,7 +25,7 @@ const Movies = () => {
     willWatchMovies,
     setWillWatchMovies,
     watchedMovies,
-    setWatchedMovies,
+    setWatchedMovies,submittedText
   } = useContext(StoreContext);
   const { pathname } = useLocation();
   const[showScroll,setShowScroll]=useState();
@@ -60,7 +60,10 @@ const isScroll=()=>{
   else if(pathname=="/movies"||pathname=="/popular"||pathname=="/upcoming"||pathname=="/imdb"){
     setShowScroll(true);
   }
-  else{
+  else if(searchShow.length>4&&pathname=="/movies/search"){
+    setShowScroll(true);
+
+  }else{
     setShowScroll(false);
   }
 
@@ -69,7 +72,7 @@ const isScroll=()=>{
 
 useEffect(()=>{
 isScroll();
-},[pathname])
+},[pathname,searchShow])
 
   //
   useEffect(() => {
@@ -125,7 +128,20 @@ isScroll();
         pathname == "/popular" ||
         pathname == "/upcoming") && <MiniBar />}
 
-   
+
+      {pathname == "/movies/search" && searchShow.length != 0 ? (
+        <div className="text-light py-2 px-4 bg-success mt-3">
+           {searchShow.length}  results found for &quot;{submittedText}&quot;
+        </div>
+      ) : null}
+      {pathname == "/movies/search" &&searchShow.length == 0 ? (
+        <div className="text-light py-2 px-4 bg-danger mt-3">
+        Results not found for  &quot;{submittedText}&quot;
+        </div>
+      ) : null} 
+ 
+
+
 {showScroll&& <div className="scrollTop  bg-none  ">
         <Button variant="dark" className="p-0 m-0" onClick={downScroll}>
           <TbSquareChevronDownFilled className="text-light fs-1" />
@@ -194,3 +210,5 @@ isScroll();
 };
 
 export default Movies;
+
+

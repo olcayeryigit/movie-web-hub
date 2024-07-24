@@ -13,6 +13,7 @@ import { BiUser, BiUserCircle } from "react-icons/bi";
 import { filteredMovies } from "../../helper/data";
 import Logout from "./logout";
 import Logout2 from "./logout2";
+import "./header.scss"
 
 const Header = () => {
   const {
@@ -26,7 +27,7 @@ const Header = () => {
     searchText,
     setSearchText,
     setSearchShow,
-    IsTimeout,
+    isTimeout,
     setIsTimeOut,
   } = useContext(StoreContext);
   const { pathname } = useLocation();
@@ -40,16 +41,18 @@ const Header = () => {
 
   //
 
+
+
   useEffect(() => {
-    if (IsTimeout) {
+    if (isTimeout) {
       setCurrentUser(null);
     }
-  }, [IsTimeout]);
+  }, [isTimeout]);
 
   useEffect(() => {
     const sessionData = JSON.parse(localStorage.getItem("sessionData"));
     if (sessionData !== null) {
-      const sessionDuration = 10000000; // Oturum süresi (örneğin, 1 saat = 3600000 ms)
+      const sessionDuration = 3600000; // Oturum süresi (örneğin, 1 saat = 3600000 ms)
       const currentTime = Date.now();
       //console.log(sessionData);
       if (!(currentTime - sessionData.loginTime < sessionDuration)) {
@@ -122,8 +125,8 @@ console.log(currentUser)
   useEffect(() => {
     //console.log("submittedText");
     //console.log(submittedText);
-    const filtrelenmislFilm = filteredMovies(submittedText);
-    setSearchShow(filtrelenmislFilm);
+    const filteredFilms = filteredMovies(submittedText);
+    setSearchShow(filteredFilms);
     //console.log(searchShow);
     if (isGoSearchPage == true) {
       navigate("/movies/search");
@@ -241,11 +244,10 @@ console.log(currentUser)
         </Container>
 
         <Navbar.Offcanvas
-          id="offcanvasNavbar-expand-md "
+          id="offcanvasNavbar-expand-md  "
           aria-labelledby="offcanvasNavbarLabel-expand-md"
           placement="end"
-          className="p-0 m-0"
-          style={{ backgroundColor: "white" }}
+          className="expandNavBar p-0 m-0 "
         >
           <Offcanvas.Header
             closeButton

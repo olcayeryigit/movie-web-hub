@@ -37,7 +37,7 @@ function App() {
   //
   const [update2, setUpdate2] = useState(false);
   //
-  const [IsTimeout, setIsTimeOut] = useState(false);
+  const [isTimeout, setIsTimeOut] = useState(false);
   const [registeredUserLogin, setRegisteredUserLogin] = useState(null);
 
   let sessionData = JSON.parse(localStorage.getItem("sessionData"));
@@ -195,7 +195,7 @@ function App() {
         setWatchedMovies,
         update2,
         setUpdate2,
-        IsTimeout,
+        isTimeout,
         setIsTimeOut,
         signUpUserName,
         setSignUpUserName,

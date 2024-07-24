@@ -16,7 +16,7 @@ const SignInPage = () => {
   const {
     setLoggedInUser,
     currentUsers,
-    isFaultyOperation,isTimeOut,
+    isFaultyOperation,isTimeout,
      setIsWentLoginPage
   } = useContext(StoreContext);
   const [disabled, setDisabled] = useState("");
@@ -156,13 +156,13 @@ const SignInPage = () => {
 
 
         {basarisizGirisUyari && (
-          <Alert variant="danger" className="mt-3">
+          <Alert variant="danger" className="mt-2">
             Username or password is incorrect. Please try again.
           </Alert>
         )}
 
-{isTimeOut&& (
-          <Alert variant="danger" className="mt-3">
+{isTimeout&& (
+          <Alert variant="danger" className="mt-2">
            Your session has expired.
           </Alert>
         )}

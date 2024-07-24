@@ -87,10 +87,14 @@ console.log(currentUser)
   //Search
 
   //bir linke tıkladığımızda input valuesi "" olsun
+
   const handleClick = () => {
-    //console.log("merhaba");
-    // console.log(inputRef.current);
-    inputRef.current.value = "";
+    if (inputRef.current) {
+      //console.log("merhaba");
+      // console.log(inputRef.current);
+
+      inputRef.current.value = "";
+    }
   };
 
   const handleChange = (e) => {
@@ -111,11 +115,10 @@ console.log(currentUser)
   const handleSubmit = (e) => {
     setDisabled("none");
     e.target.reset();
-    e.preventDefault();
+    e.preventDefault(); // Form submit işlemi sırasında varsayılan davranışı engelleyelim
     setSubmittedText(searchText);
     setIsGoSearchPage(true);
   };
-
   useEffect(() => {
     //console.log("submittedText");
     //console.log(submittedText);
@@ -187,7 +190,6 @@ console.log(currentUser)
             <Navbar.Toggle
               aria-controls="offcanvasNavbar-expand-sm"
               className="bg-light"
-          
             />
           </Container>
 
@@ -238,20 +240,22 @@ console.log(currentUser)
           </Container>
         </Container>
 
-        <Navbar.Offcanvas 
+        <Navbar.Offcanvas
           id="offcanvasNavbar-expand-md "
           aria-labelledby="offcanvasNavbarLabel-expand-md"
           placement="end"
-          className="p-0 m-0" 
-          style={{backgroundColor:"white"}}
+          className="p-0 m-0"
+          style={{ backgroundColor: "white" }}
         >
-
-         
-          <Offcanvas.Header closeButton className="ms-3 mt-2 fs-3 mb-0 p-0" >    Movies   </Offcanvas.Header>
-          <Offcanvas.Header  className="mt-3 ms-1 p-0 mb-2 " >
-
-          
-          {!sessionData ? (
+          <Offcanvas.Header
+            closeButton
+            className="ms-3 me-3 mt-2 fs-3 mb-0 p-0"
+          >
+            {" "}
+            Movies{" "}
+          </Offcanvas.Header>
+          <Offcanvas.Header className="mt-3 ms-1 p-0 mb-2 ">
+            {!sessionData ? (
               <>
                 <span className="d-flex gap-2 ms-2">
                   <Button
@@ -260,7 +264,8 @@ console.log(currentUser)
                     variant="light "
                     className="text-nowrap fs-6  mb-2"
                     size="md"
-                  >Sign Up
+                  >
+                    Sign Up
                   </Button>
                   <Button
                     as={Link}
@@ -268,44 +273,37 @@ console.log(currentUser)
                     variant="light "
                     className="text-nowrap fs-6  mb-2"
                     size="md"
-                  >Sign In
+                  >
+                    Sign In
                   </Button>
                 </span>
               </>
             ) : (
               <>
-              <div className="d-flex "
-          
-          >
-                <Button 
-                  as={Link}
-                  to="/profile/myfavorites"
-                  className="d-flex justify-content-center align-items-center gap-1  ms-2 border-0"
-                  variant="light"
-                  size="md"
-                >
-                  <BiUser className="text-dark fs-5 bg-light rounded-5" />
-                  <div className="">
-                    {currentUser.firstName[0].toUpperCase()}
-                    {currentUser.firstName.slice(1)}{" "}
-                    {currentUser.lastName[0].toUpperCase()}.
-                  </div>
-                </Button>
-  <Logout2 />
-
-                
+                <div className="d-flex ">
+                  <Button
+                    as={Link}
+                    to="/profile/myfavorites"
+                    className="d-flex justify-content-center align-items-center gap-1  ms-2 border-0"
+                    variant="light"
+                    size="md"
+                  >
+                    <BiUser className="text-dark fs-5 bg-light rounded-5" />
+                    <div className="">
+                      {currentUser.firstName[0].toUpperCase()}
+                      {currentUser.firstName.slice(1)}{" "}
+                      {currentUser.lastName[0].toUpperCase()}.
+                    </div>
+                  </Button>
+                  <Logout2 />
                 </div>
               </>
             )}
           </Offcanvas.Header>
-          <Offcanvas.Header className="ms-0 mt-0 pt-0 " >
-
-        
-           
-          <Form
+          <Offcanvas.Header className="ms-0 mt-0 pt-0 ">
+            <Form
               onSubmit={(e) => handleSubmit(e)}
               className=" d-flex flex-row gap-2 ms-0"
-             
             >
               <Form.Control
                 ref={inputRef}
@@ -326,10 +324,7 @@ console.log(currentUser)
                 Search
               </Button>
             </Form>
-
-  </Offcanvas.Header>
-
-
+          </Offcanvas.Header>
         </Navbar.Offcanvas>
       </Navbar>
     );

@@ -1,29 +1,21 @@
-.formContainer{
-     min-height:100vh;
-     background-color: rgb(165, 165, 165);
-     
+.formContainer {
+  min-height: 100vh;
+  background-color: rgb(165, 165, 165);
 
+  .signUpForm {
+    max-width: 90%;
+    min-width: 30%;
 
-     .signUpForm{
-        min-width: 30rem;
-        max-height:40rem ;
-background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 1);
 
-.signUpHead{
-   font-size: 20px;
-}
-.signUpLabel{
-font-size: 13px;
-}
+    .signUpHead {
+      font-size: 20px;
+    }
+    .signUpLabel {
+      font-size: 13px;
+    }
 
-
-        .signUpFormControl{
-            
-        }
-
-
-
-
-     }
-
+    .signUpFormControl {
+    }
+  }
 }

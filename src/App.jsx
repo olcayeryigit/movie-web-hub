@@ -1,14 +1,16 @@
 import AppRouter from "./router";
 import StoreContext from "./store";
 import { useEffect, useState } from "react";
-import { getAllUSer} from "./helper/api";
+import { getAllUSer } from "./helper/api";
 import data from "./data/omdb-movies-brief.json";
 import { allMovies } from "./helper/data";
+import SignUpForm from "./components/pages/signUp/signUpForm";
 
 function App() {
   //console.log(data);
 
   const [registeredUser, setRegisteredUser] = useState(null);
+  const [signUpUserName, setSignUpUserName] = useState(null);
   const [loggedInUser, setLoggedInUser] = useState([]);
   const [isWentRegistrationPage, setIsWentRegistrationPage] = useState(false);
   const [currentUsers, setCurrentUsers] = useState([]);
@@ -36,8 +38,9 @@ function App() {
   const [update2, setUpdate2] = useState(false);
   //
   const [IsTimeout, setIsTimeOut] = useState(false);
+  const [suv, setSuv] = useState(null);
 
-  const sessionData = JSON.parse(localStorage.getItem("sessionData"));
+  let sessionData = JSON.parse(localStorage.getItem("sessionData"));
 
   const dataMovies = allMovies(data);
   //console.log(dataMovies);
@@ -52,11 +55,11 @@ function App() {
     const fetchingUsersOperation = async () => {
       try {
         const users = await getAllUSer();
-       // console.log(users);
+        // console.log(users);
         setCurrentUsers(users);
       } catch (error) {
         // "kullanicilar getirilemedi"
-       // console.log("Users could not be retrieved.");
+        // console.log("Users could not be retrieved.");
         setIsFaultyOperation(true);
       }
 
@@ -72,11 +75,47 @@ function App() {
     isNeedInHeader,
     update,
     update2,
+    signUpUserName,
   ]);
+
+  useEffect(() => {
+    if (signUpUserName&&currentUsers) {
+      console.log(signUpUserName);
+      console.log(currentUsers);
+      const sUU = currentUsers.filter(
+        (item) => item.userName == signUpUserName
+      );
+      setSuv(sUU);
+
+    }
+  }, [currentUsers, signUpUserName]);
 
   // console.log(sessionData);
 
+
   useEffect(() => {
+    if (suv && suv.length > 0) {
+      const user = suv[0];
+      const sessionDt = {
+        userN: user.userName,
+        password: user.password,
+        id: user.id,
+        loginTime: Date.now(), // Oturum başlangıç zamanını saklayın
+      };
+
+      localStorage.setItem("sessionData", JSON.stringify(sessionDt));
+      console.log(sessionDt);
+    }
+  }, [suv]);
+
+
+
+
+
+
+  useEffect(() => {
+    sessionData = JSON.parse(localStorage.getItem("sessionData"));
+
     if (sessionData != null) {
       currentUsers.map((item) => {
         if (item.id == sessionData.id) {
@@ -85,11 +124,10 @@ function App() {
         }
       });
     }
-    //   console.log(currentUsers);
-  }, [currentUsers]);
+    //   console.log(currentUser);
+  }, [currentUsers, signUpUserName,suv]);
 
   useEffect(() => {
-    
     let userMov = movies;
     if (userMov) {
       userMov.map((movie) => {
@@ -97,8 +135,8 @@ function App() {
       });
     }
     //console.log(userMov);
-    if (currentUser && userMov&&currentUser.favoriteFilms) {
-   //   console.log(userMov);
+    if (currentUser && userMov && currentUser.favoriteFilms) {
+      //   console.log(userMov);
       userMov.map((mov) => {
         currentUser.favoriteFilms.map((lf) => {
           if (mov.id == lf) {
@@ -116,7 +154,7 @@ function App() {
 
   //
   useEffect(() => {
-    if (currentUser&&currentUser.favoriteFilms) {
+    if (currentUser && currentUser.favoriteFilms) {
       let favMov = movies.filter((movie) =>
         currentUser.favoriteFilms.includes(movie.id)
       );
@@ -168,6 +206,8 @@ function App() {
         setUpdate2,
         IsTimeout,
         setIsTimeOut,
+        signUpUserName,
+        setSignUpUserName,
       }}
     >
       <AppRouter />

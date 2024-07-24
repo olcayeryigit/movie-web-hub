@@ -97,7 +97,7 @@ const SignInPage = () => {
     >
 
 
-<div className="signInBackground bg-dark">
+<div className="signInBackground bg-dark ">
 
 </div>
 
@@ -108,7 +108,7 @@ const SignInPage = () => {
         className="signInForm "
       >
 
-        <h2 className="text-center pt-0 ">Sign In</h2>
+        <h2 className="text-center pt-0">Sign In</h2>
         <p className="text-center mb-4">New user? <Link className="text-primary text-decoration-none"to="/sign-form"> Create account?</Link></p>
         {/*<div className="fs-4 fw-bold mb-2 d-flex justify-content-between text-black  ">
           <a href="/" >
@@ -145,7 +145,7 @@ const SignInPage = () => {
           />
         </FloatingLabel>
       <div className="d-flex align-items-center gap-2 mt-3">
-        <Button type="submit" disabled={disabled}>
+        <Button type="submit" disabled={disabled} className="">
           Sign In
         </Button>
 

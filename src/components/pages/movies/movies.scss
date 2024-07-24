@@ -11,7 +11,7 @@
 @media (min-width: 1035px) {
   .scrollBottom {
     position: fixed;
-    top: 92vh; /* Üstten 10 piksel boşluk */
+    top: 88vh; /* Üstten 10 piksel boşluk */
     right: 2%; /* Sağdan 10 piksel boşluk */
   }
 }
@@ -28,7 +28,7 @@
 @media (min-width: 992px) and (max-width: 1035px) {
     .scrollBottom {
         position: fixed;
-        top: 92vh; /* Üstten 10 piksel boşluk */
+        top: 88vh; /* Üstten 10 piksel boşluk */
         right: 0.2%; /* Sağdan 10 piksel boşluk */
       }
 }
@@ -38,38 +38,57 @@
  @media (min-width: 768px) and (max-width: 991px) {
     .scrollTop {
         position: fixed;
-        top: 22vh; /* Üstten 10 piksel boşluk */
-        right: 2%; /* Sağdan 10 piksel boşluk */
+        top: 12vh; /* Üstten 10 piksel boşluk */
+        right: 1%; /* Sağdan 10 piksel boşluk */
       }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
     .scrollBottom {
         position: fixed;
-        top: 92vh; /* Üstten 10 piksel boşluk */
-        right: 2%; /* Sağdan 10 piksel boşluk */
+        top: 95vh; /* Üstten 10 piksel boşluk */
+        right: 1%; /* Sağdan 10 piksel boşluk */
       }
 }
 
 
-    //Mobil 
-    @media (max-width: 767px) {
+    // 
+    @media (min-width: 412px) and (max-width:767px) {
         .scrollTop {
             position: fixed;
-            top: 45vh; /* Üstten 10 piksel boşluk */
+            top: 33vh; /* Üstten 10 piksel boşluk */
             right: 8%; /* Sağdan 10 piksel boşluk */
           }
     }
 
-    @media (max-width: 767px) {
+    @media (min-width: 412px) and (max-width:767px) {
          .scrollBottom {
         position: fixed;
-        top: 93vh; /* Üstten 10 piksel boşluk */
+        top: 90.5vh; /* Üstten 10 piksel boşluk */
         right: 8%; /* Sağdan 10 piksel boşluk */
       }
     }
 
     //
+
+    // 
+    @media (max-width:411px) {
+      .scrollTop {
+          position: fixed;
+          top: 33vh; /* Üstten 10 piksel boşluk */
+          right: 8%; /* Sağdan 10 piksel boşluk */
+        }
+  }
+
+  @media  (max-width:411px) {
+       .scrollBottom {
+      position: fixed;
+      top: 90.5vh; /* Üstten 10 piksel boşluk */
+      right: 8%; /* Sağdan 10 piksel boşluk */
+    }
+  }
+
+
 .cardRow {
   background-color: #000000;
 }

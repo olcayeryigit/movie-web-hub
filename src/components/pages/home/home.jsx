@@ -26,7 +26,7 @@ const Home = () => {
             </Carousel.Item>
             <Carousel.Item className="">
               <Image
-                src={movies[59].Poster}
+                src={movies[16].Poster}
                 text="Second slide"
                 className="carouselImg"
               />

@@ -5,17 +5,20 @@ import { createUser, getUser } from "../../../helper/api";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import StoreContext from "../../../store";
-import "./signUpForm.scss"
+import "./signUpForm.scss";
 const SignUpForm = () => {
   const {
     setRegisteredUser,
     setIsWentRegistrationPage,
     currentUsers,
-    isFaultyOperation,setUpdate2
+    isFaultyOperation,
+    setUpdate2,
+    signUpUserName,
+    setSignUpUserName,
   } = useContext(StoreContext);
 
   const navigate = useNavigate();
-  const [ isFailedRegistration, setIsFailedRegistration] = useState(false);
+  const [isFailedRegistration, setIsFailedRegistration] = useState(false);
 
   useEffect(() => {
     setIsWentRegistrationPage(true);
@@ -35,7 +38,7 @@ const SignUpForm = () => {
   //2-VALIDATIONSCHEMA
 
   const userNames = [];
- currentUsers.map((item) => {
+  currentUsers.map((item) => {
     userNames.push(item.userName);
   });
   //console.log(kullaniciIsimleri);
@@ -54,15 +57,16 @@ const SignUpForm = () => {
       ),
     //
     email: Yup.string().email("Invalid email").required("Required"),
-    password: Yup.string().max(20, "Max 20 chars.")
-    .min(8, "Min 8 chars.")
-     
+    password: Yup.string()
+      .max(20, "Max 20 chars.")
+      .min(8, "Min 8 chars.")
+
       .required("Required"),
   });
 
   //3-ONSUBMIT
   const onSubmit = async (values) => {
-   // console.log(values);
+    // console.log(values);
     try {
       await createUser(values);
     } catch (error) {
@@ -73,9 +77,10 @@ const SignUpForm = () => {
 
     if (!isFailedRegistration) {
       setRegisteredUser(values);
+      setSignUpUserName(formik.values.userName);
       formik.resetForm();
-      navigate("/registrationsuccessful");
       setUpdate2((prev) => !prev);
+      navigate("/registrationsuccessful"); 
 
     }
   };
@@ -92,12 +97,13 @@ const SignUpForm = () => {
     return res;
   };
 
+
   return (
-    <Container 
+    <Container
       fluid
       className="formContainer d-flex flex-column justify-content-center align-items-center"
     >
-      <Form 
+      <Form
         noValidate
         onSubmit={formik.handleSubmit}
         className="signUpForm rounded-2 px-4 "
@@ -179,16 +185,13 @@ const SignUpForm = () => {
           </Form.Control.Feedback>
         </Form.Group>
         <div className="d-flex align-items-center gap-2 mt-4 mb-3">
-
           <Button type="submit" size="sm">
             {formik.isSubmitting ? <Spinner size="sm" /> : "Send"}
           </Button>
 
-          <Button  variant="danger"
-  as={Link} to="/" size="sm">
+          <Button variant="danger" as={Link} to="/" size="sm">
             Cancel
           </Button>
-
         </div>
       </Form>
     </Container>

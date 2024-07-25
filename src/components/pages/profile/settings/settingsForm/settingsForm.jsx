@@ -179,7 +179,7 @@ const[formTextClassName,setFormTextClassName]=useState("text-danger");
           setIsAvailableUN("disabled");
           setMessageUN("Please try a different username from your previous one.");
         } else {
-          setMessageUN("Please try a different username from your previous one.");
+          setMessageUN("This username is already taken.");
         }
       }
 

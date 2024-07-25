@@ -85,8 +85,8 @@ const Header = () => {
     if (inputRef.current) {
       //console.log("merhaba");
       // console.log(inputRef.current);
-
       inputRef.current.value = "";
+
     }
   };
 
@@ -115,6 +115,7 @@ const Header = () => {
     setSubmittedText(searchText);
     setIsGoSearchPage(true);
     setShowOffcanvas(false); // Arama butonuna basıldığında Offcanvas'ı kapat
+
   };
 
   // submittedText değiştiğinde işlemleri gerçekleştir

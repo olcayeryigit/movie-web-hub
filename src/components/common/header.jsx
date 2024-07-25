@@ -13,7 +13,7 @@ import { BiUser, BiUserCircle } from "react-icons/bi";
 import { filteredMovies } from "../../helper/data";
 import Logout from "./logout";
 import Logout2 from "./logout2";
-import "./header.scss"
+import "./header.scss";
 
 const Header = () => {
   const {
@@ -38,17 +38,16 @@ const Header = () => {
 
   const [disabled, setDisabled] = useState("none");
   const [isGoSearchPage, setIsGoSearchPage] = useState(false);
+  const [showOffcanvas, setShowOffcanvas] = useState(false); // Offcanvas görünürlüğünü yönetmek için yeni state
 
-  //
-
-
-
+  // isTimeout değiştiğinde currentUser'ı null yap
   useEffect(() => {
     if (isTimeout) {
       setCurrentUser(null);
     }
   }, [isTimeout]);
 
+  // pathname değiştiğinde sessionData'yı kontrol et
   useEffect(() => {
     const sessionData = JSON.parse(localStorage.getItem("sessionData"));
     if (sessionData !== null) {
@@ -64,7 +63,7 @@ const Header = () => {
     }
   }, [pathname]);
 
-  //
+  // currentUsers değiştiğinde currentUser'ı belirle
   useEffect(() => {
     if (sessionData != null) {
       setIsNeedInHeader(true);
@@ -81,16 +80,7 @@ const Header = () => {
     }
   }, [currentUsers]);
 
-  /*
-useEffect(()=>{
-console.log(currentUser)
-},[currentUser])
-*/
-
-  //Search
-
-  //bir linke tıkladığımızda input valuesi "" olsun
-
+  // Bir linke tıkladığımızda input valuesi "" olsun
   const handleClick = () => {
     if (inputRef.current) {
       //console.log("merhaba");
@@ -100,11 +90,13 @@ console.log(currentUser)
     }
   };
 
+  // Search input değiştiğinde searchText'i güncelle
   const handleChange = (e) => {
     console.log(e.target);
     setSearchText(e.target.value);
   };
 
+  // searchText değiştiğinde disabled durumunu güncelle
   useEffect(() => {
     // console.log(searchText);
     //state asenkron olduğu için, useEffect içinde güncel searchText değerini bu şekilde consoleda görebiliriz
@@ -115,13 +107,17 @@ console.log(currentUser)
     }
   }, [searchText]);
 
+  // Form submit edildiğinde işlemleri gerçekleştir
   const handleSubmit = (e) => {
     setDisabled("none");
     e.target.reset();
     e.preventDefault(); // Form submit işlemi sırasında varsayılan davranışı engelleyelim
     setSubmittedText(searchText);
     setIsGoSearchPage(true);
+    setShowOffcanvas(false); // Arama butonuna basıldığında Offcanvas'ı kapat
   };
+
+  // submittedText değiştiğinde işlemleri gerçekleştir
   useEffect(() => {
     //console.log("submittedText");
     //console.log(submittedText);
@@ -135,16 +131,16 @@ console.log(currentUser)
 
   if (currentUser != null || sessionData == null)
     return (
-      <Navbar expand="md" className=" bg-light border border-dark border-1">
+      <Navbar expand="md" className="bg-light border border-dark border-1">
         <Container
           fluid
-          className="d-flex flex-row flex-nowrap justify-content-between align-items-center  gap-2  px-4"
+          className="d-flex flex-row flex-nowrap justify-content-between align-items-center gap-2 px-4"
           style={{ backgroundColor: "lightgray" }}
         >
           <Navbar.Brand className="text-dark">Movies</Navbar.Brand>
           <Container className="d-flex flex-row">
             <Nav
-              className="d-flex flex-row flex-grow-1 gap-3 "
+              className="d-flex flex-row flex-grow-1 gap-3"
               style={{ backgroundColor: "lightgray" }}
             >
               <Nav.Link
@@ -167,7 +163,7 @@ console.log(currentUser)
 
             <Form
               onSubmit={(e) => handleSubmit(e)}
-              className="ms-5 d-none d-md-flex flex-row mt-1"
+              className="searchForm d-none d-md-flex flex-row mt-1 "
               style={{ width: "12rem", height: "2rem" }}
             >
               <Form.Control
@@ -182,7 +178,7 @@ console.log(currentUser)
               <Button
                 type="submit"
                 variant="warning rounded"
-                className="text-nowrap "
+                className="text-nowrap"
                 size="sm"
                 disabled={disabled ? "none" : ""}
               >
@@ -193,6 +189,7 @@ console.log(currentUser)
             <Navbar.Toggle
               aria-controls="offcanvasNavbar-expand-sm"
               className="bg-light"
+              onClick={() => setShowOffcanvas(!showOffcanvas)} // Offcanvas toggle
             />
           </Container>
 
@@ -226,7 +223,7 @@ console.log(currentUser)
                   as={Link}
                   to="/profile/myfavorites"
                   style={{ height: "2.1rem", width: "9rem" }}
-                  className="d-flex justify-content-center align-items-center gap-1 border border-secondary ms-4 "
+                  className="d-flex justify-content-center align-items-center gap-1 border border-secondary ms-4"
                   variant="dark rounded-0"
                 >
                   <BiUserCircle className="text-white fs-5 bg-dark rounded-5" />
@@ -244,27 +241,28 @@ console.log(currentUser)
         </Container>
 
         <Navbar.Offcanvas
-          id="offcanvasNavbar-expand-md  "
+          show={showOffcanvas} // Offcanvas görünürlüğü
+          onHide={() => setShowOffcanvas(false)} // Offcanvas'ı kapatma
+          id="offcanvasNavbar-expand-md"
           aria-labelledby="offcanvasNavbarLabel-expand-md"
           placement="end"
-          className="expandNavBar p-0 m-0 "
+          className="expandNavBar p-0 m-0"
         >
           <Offcanvas.Header
             closeButton
             className="ms-3 me-3 mt-2 fs-3 mb-0 p-0"
           >
-            {" "}
-            Movies{" "}
+            Movies
           </Offcanvas.Header>
-          <Offcanvas.Header className="mt-3 ms-1 p-0 mb-2 ">
+          <Offcanvas.Header className="mt-3 ms-1 p-0 mb-2">
             {!sessionData ? (
               <>
                 <span className="d-flex gap-2 ms-2">
                   <Button
                     as={Link}
                     to="sign-form"
-                    variant="light "
-                    className="text-nowrap fs-6  mb-2"
+                    variant="light"
+                    className="text-nowrap fs-6 mb-2"
                     size="md"
                   >
                     Sign Up
@@ -272,8 +270,8 @@ console.log(currentUser)
                   <Button
                     as={Link}
                     to="sign-in"
-                    variant="light "
-                    className="text-nowrap fs-6  mb-2"
+                    variant="light"
+                    className="text-nowrap fs-6 mb-2"
                     size="md"
                   >
                     Sign In
@@ -282,11 +280,11 @@ console.log(currentUser)
               </>
             ) : (
               <>
-                <div className="d-flex ">
+                <div className="d-flex">
                   <Button
                     as={Link}
                     to="/profile/myfavorites"
-                    className="d-flex justify-content-center align-items-center gap-1  ms-2 border-0"
+                    className="d-flex justify-content-center align-items-center gap-1 ms-2 border-0"
                     variant="light"
                     size="md"
                   >
@@ -302,17 +300,17 @@ console.log(currentUser)
               </>
             )}
           </Offcanvas.Header>
-          <Offcanvas.Header className="ms-0 mt-0 pt-0 ">
+          <Offcanvas.Header className="ms-0 mt-0 pt-0">
             <Form
               onSubmit={(e) => handleSubmit(e)}
-              className=" d-flex flex-row gap-2 ms-0"
+              className="d-flex flex-row gap-2 ms-0"
             >
               <Form.Control
                 ref={inputRef}
                 type="search"
                 placeholder="Search Movie"
                 size="md"
-                className="me-0  border border-black "
+                className="me-0 border border-black"
                 aria-label="Search"
                 onChange={(e) => handleChange(e)}
               />

@@ -1,4 +1,24 @@
-  @media (max-width: 450px) {
+ .searchForm{
+  margin-right: -80%;
+ }
+ 
+ @media (max-width: 1024px) and (min-width:913px) {
+  .searchForm{
+    margin-right: -74%;
+   }
+}
+@media (max-width: 912px) and (min-width:769px) {
+  .searchForm{
+    margin-right: -70%;
+   }
+}
+@media (max-width: 768px)  {
+  .searchForm{
+    margin-right: -41%;
+   }
+}
+
+ @media (max-width: 450px) {
     .expandNavBar{
-width: 65% !important;
+width: 80% !important;
  }}

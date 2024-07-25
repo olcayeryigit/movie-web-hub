@@ -53,7 +53,7 @@ const SignUpForm = () => {
       //kulanicilardaki kullanici isimleri ile, userName alınamasın
       .notOneOf(
         userNames,
-        "This username is already taken. " + userNames.join(", ")
+        "This username is already taken." 
       ),
     //
     email: Yup.string().email("Invalid email").required("Required"),

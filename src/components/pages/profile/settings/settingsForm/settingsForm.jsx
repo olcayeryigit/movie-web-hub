@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import "./settings-form.scss";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { HiUserCircle } from "react-icons/hi";
-import userImage from "../../../../../images/2.png"
+import userImage from "../../../../../images/2.png";
 import { GoPencil } from "react-icons/go";
 const SettingsForm = () => {
   const { currentUser, currentUsers, setCurrentUser, update2, setUpdate2 } =
@@ -21,11 +21,8 @@ const SettingsForm = () => {
   const formRef = useRef(null);
 
   const navigate = useNavigate();
-//
-const[formTextClassName,setFormTextClassName]=useState("text-danger");
-
-
-
+  //
+  const [formTextClassName, setFormTextClassName] = useState("text-danger");
 
   //UserName
   const [u, setU] = useState("");
@@ -62,18 +59,20 @@ const[formTextClassName,setFormTextClassName]=useState("text-danger");
   //
   const [display, setDisplay] = useState("");
   const [controlDisabled, setControlDisabled] = useState("");
-  
+
   ///
 
-  useEffect(()=>{
-    if(messageUN.includes("valid")||messageP.includes("valid")||messageE.includes("valid")){
-    setFormTextClassName("text-success")
-    }
-    else{
+  useEffect(() => {
+    if (
+      messageUN.includes("valid") ||
+      messageP.includes("valid") ||
+      messageE.includes("valid")
+    ) {
+      setFormTextClassName("text-success");
+    } else {
       setFormTextClassName("text-danger");
     }
-
-    },[messageUN,messageP,messageE])
+  }, [messageUN, messageP, messageE]);
 
   //***************/
   const handleReset = () => {
@@ -85,29 +84,22 @@ const[formTextClassName,setFormTextClassName]=useState("text-danger");
   const handleClickDelete = () => {
     setIsClickDelete(true);
     setDisplay("d-none");
-
   };
 
   const handleClickCancelDelete = () => {
     setIsClickDelete(false);
     setDisplay("");
-
   };
 
   const handleChangeDelete = (e) => {
-    if(e.target.value==""){
+    if (e.target.value == "") {
       setControlDisabled("disabled");
-    }
-    else{
+    } else {
       setControlDisabled("");
-    
     }
 
     //console.log(e.target.value);
     setDeleteWithPassword(e.target.value);
-
-
-
   };
 
   const handleClickDeleteOperation = () => {
@@ -122,13 +114,12 @@ const[formTextClassName,setFormTextClassName]=useState("text-danger");
       if (deleteWithPassword == currentUser.password) {
         const deleteUserById = async () => {
           await deleteUser(currentUser.id);
+          localStorage.removeItem("sessionData");
+          setCurrentUser(null);
+          setUpdate2((prev) => !prev);
+          navigate("/");
         };
-
         deleteUserById();
-        localStorage.removeItem("sessionData");
-        setCurrentUser(null);
-        setUpdate2((prev) => !prev);
-        navigate("/");
       } else {
         handleReset();
         console.log("Deletion failed, you entered the wrong password.");
@@ -153,7 +144,7 @@ const[formTextClassName,setFormTextClassName]=useState("text-danger");
     setDisplay("d-none");
   };
 
-  const handleClickUNAbort= () => {
+  const handleClickUNAbort = () => {
     setEditUserName((prev) => !prev);
     setMessageUN("");
     setDisplay("");
@@ -177,7 +168,9 @@ const[formTextClassName,setFormTextClassName]=useState("text-danger");
       if (usersUN.includes(newUserName)) {
         if (newUserName == currentUser.userName) {
           setIsAvailableUN("disabled");
-          setMessageUN("Please try a different username from your previous one.");
+          setMessageUN(
+            "Please try a different username from your previous one."
+          );
         } else {
           setMessageUN("This username is already taken.");
         }
@@ -210,7 +203,6 @@ const[formTextClassName,setFormTextClassName]=useState("text-danger");
       };
       setDisplay("");
       UpdateUserById();
-
     }
 
     //updateten sonra ok cancel butonları kaybolsun
@@ -221,30 +213,27 @@ const[formTextClassName,setFormTextClassName]=useState("text-danger");
   const handleClickFN = () => {
     setEditFirstName((prev) => !prev);
     setDisplay("d-none");
-
   };
   const handleClickFNAbort = () => {
     setEditFirstName((prev) => !prev);
     setDisplay("");
-
   };
   const handleChangeFN = (e) => {
     setMessageFN("");
     setNewFirstName(e.target.value);
-    
   };
 
   useEffect(() => {
-    if(!newFirstName){
+    if (!newFirstName) {
       setIsAvailableFN("disabled");
     }
-
-
 
     if (currentUser && newFirstName) {
       if (newFirstName == currentUser.firstName) {
         setIsAvailableFN("disabled");
-        setMessageFN("Please try a different firstname from your previous one.");
+        setMessageFN(
+          "Please try a different firstname from your previous one."
+        );
       } else {
         setIsAvailableFN("");
       }
@@ -263,7 +252,6 @@ const[formTextClassName,setFormTextClassName]=useState("text-danger");
       };
       setDisplay("");
       UpdateUserById();
-
     }
 
     //updateten sonra  ok cancel butonları kaybolsun
@@ -274,13 +262,10 @@ const[formTextClassName,setFormTextClassName]=useState("text-danger");
   const handleClickLN = () => {
     setDisplay("d-none");
     setEditLastName((prev) => !prev);
-
-
   };
   const handleClickLNAbort = () => {
     setEditLastName((prev) => !prev);
     setDisplay("");
-
   };
   const handleChangeLN = (e) => {
     setMessageLN("");
@@ -289,15 +274,11 @@ const[formTextClassName,setFormTextClassName]=useState("text-danger");
   };
 
   useEffect(() => {
-
-if(!newLastName){
-  setIsAvailableLN("disabled");
-}
+    if (!newLastName) {
+      setIsAvailableLN("disabled");
+    }
 
     if (currentUser && newLastName) {
-
-
-
       if (newLastName == currentUser.lastName) {
         setIsAvailableLN("disabled");
         setMessageLN("Please try a different username from your previous one.");
@@ -320,13 +301,10 @@ if(!newLastName){
       setDisplay("");
 
       UpdateUserById();
-
     }
 
     //updateten sonra  ok cancel butonları kaybolsun
     setEditLastName((prev) => !prev);
-
-
   };
 
   //EMAİL
@@ -340,13 +318,11 @@ if(!newLastName){
   const handleClickE = () => {
     setEditEmail((prev) => !prev);
     setDisplay("d-none");
-
   };
-  const handleClickEAbort= () => {
+  const handleClickEAbort = () => {
     setMessageE("");
     setEditEmail((prev) => !prev);
     setDisplay("");
-
   };
   const handleChangeE = (e) => {
     setNewEmail(e.target.value);
@@ -391,7 +367,7 @@ if(!newLastName){
     }
   }, [currentUsers, currentUser, newEmail]);
 
-  const handleClickESend= () => {
+  const handleClickESend = () => {
     //update isLemi yapilsin
     if (currentUser && newEmail) {
       const UpdateUserById = async () => {
@@ -434,7 +410,7 @@ if(!newLastName){
 
   useEffect(() => {
     if (currentUser) {
-      const starsPassword =createStars(currentUser.password);
+      const starsPassword = createStars(currentUser.password);
 
       setPstar(starsPassword);
     }
@@ -450,11 +426,15 @@ if(!newLastName){
     if (currentUsers && newPassword) {
       if (newPassword == currentUser.password) {
         setIsAvailableP("disabled");
-        setMessageP("Please enter a different password from your previous one.");
+        setMessageP(
+          "Please enter a different password from your previous one."
+        );
       }
       if (newPassword != currentUser.password) {
         if (newPassword.length < 8 || newPassword.length > 20) {
-          setMessageP("The password can be a maximum of 20 characters and a minimum of 8 characters.");
+          setMessageP(
+            "The password can be a maximum of 20 characters and a minimum of 8 characters."
+          );
           setIsAvailableP("disabled");
         } else {
           setIsAvailableP("");
@@ -467,12 +447,10 @@ if(!newLastName){
   const handleClickP = () => {
     setEditPassword((prev) => !prev);
     setDisplay("d-none");
-
   };
   const handleClickPAbort = () => {
     setEditPassword((prev) => !prev);
     setDisplay("");
-
   };
 
   const handleClickPSend = () => {
@@ -496,383 +474,383 @@ if(!newLastName){
 
   if (currentUser)
     return (
-
       <Container className="p-0 m-0">
-      <Container className="editFormContainer pt-4 pb-5 d-flex justify-content-center align-items-center  ">
-
-
-
-
-        <Form
-          ref={formRef}
-          className="formEdit py-4 d-flex flex-column justify-content-start align-items-center text-center rounded-3"
-        >
-
-
-
-
-<div className="userImage ">
-  <img className="img-fluid "  src={userImage} />
-  </div>
-
-
-
-          {/**USERNAME */}
-          <Form.Group
-            className=" mt-2 mb-1 d-flex flex-column "
-            controlId="formBasicEmail"
+        <Container className="editFormContainer pt-4 pb-5 d-flex justify-content-center align-items-center  ">
+          <Form
+            ref={formRef}
+            className="formEdit py-4 d-flex flex-column justify-content-start align-items-center text-center rounded-3"
           >
-            <div className="d-flex gap-2">
-            
-
-              {!editUserName ? (
-                <Form.Label className="editLabel d-flex justify-content-center align-items-center rounded gap-1">
-                  @{u}
-                  <Button
-                    className={`editİcon text-dark  border-0 p-0 ${display}`}
-                    onClick={handleClickUN}
-                  >
-                    <GoPencil className="mb-1 me-1 text-primary "/>
-                  </Button>
-                </Form.Label>
-              ) : (
-                <div className="d-flex flex-column ">
-                  <div className="d-flex">
-                    <Form.Control
-
-                      type="text"
-                      placeholder="Enter your username"
-                      className="editFormControl border border-0 rounded rounded-0  "
-                      defaultValue=""
-                      onChange={(e) => handleChangeUN(e)}
-                    />
-                  </div>
-
-   <Form.Text className={`formText text-start ${formTextClassName} `}>{messageUN}</Form.Text>
-
-                   
-
-
-
-                  <div className="d-flex mt-1 gap-1">
-                    <Button
-                      className=" m-0 px-4 py-1"
-                      onClick={handleClickUNSend}
-                      disabled={isAvailableUN}
-                      size="dm"
-                    >
-                      Update
-                    </Button>
-                    <Button
-                                        variant="danger"
-
-                      className="py-1 m-0 px-4"
-                      onClick={handleClickUNAbort}
-                      size="sm"
-                    >
-                      Cancel
-                    </Button>
-                  </div>
-                  <div></div>
-                </div>
-              )}
+            <div className="userImage ">
+              <img className="img-fluid " src={userImage} />
             </div>
-          </Form.Group>
-          {/**FİRSTNAME */}
 
-          <Form.Group
-            className="mb-2 d-flex flex-column "
-            controlId="formBasicEmail"
-          >
-            <div className="d-flex gap-2">
-              <Form.Label className="editLabel2 rounded text-black ">Firstname</Form.Label>
-
-              {!editFirstName ? (
-                <Form.Label className="editLabel rounded d-flex justify-content-between align-items-center">
-                  {currentUser.firstName[0].toUpperCase()}
-                  {currentUser.firstName.slice(1)}{" "}
-                  <Button
-                    className={`editİcon text-dark border-0 ms-5 p-0 ${display}`}
-                    onClick={handleClickFN}
-                  >
-                    <GoPencil className="mb-1 me-1 text-primary "/>
-                    </Button>
-                </Form.Label>
-              ) : (
-                <div className="d-flex flex-column">
-
-                  
-                  <Form.Control
-                    type="text"
-                    placeholder=""
-                    className="editFormControl border border-0 rounded rounded-0   "
-                    defaultValue=""
-                    onChange={(e) => handleChangeFN(e)}
-                  />
-
-<Form.Text className={`formText text-start ${formTextClassName} `}>{messageFN}</Form.Text>
-
-                  <div className="d-flex  gap-1 mt-2">
-
-
+            {/**USERNAME */}
+            <Form.Group
+              className=" mt-2 mb-1 d-flex flex-column "
+              controlId="formBasicEmail"
+            >
+              <div className="d-flex gap-2">
+                {!editUserName ? (
+                  <Form.Label className="editLabel d-flex justify-content-center align-items-center rounded gap-1">
+                    @{u}
                     <Button
-                      className="py-1 m-0 px-4"
-                      onClick={handleClickFNSend}
-                      disabled={isAvailableFN}
-                      size="sm"
+                      className={`editİcon text-dark  border-0 p-0 ${display}`}
+                      onClick={handleClickUN}
                     >
-                      Update
+                      <GoPencil className="mb-1 me-1 text-primary " />
                     </Button>
-                    <Button
-                                        variant="danger"
-
-                      className="py-1 m-0 px-4"
-                      onClick={handleClickFNAbort}
-                      size="sm"
-                    >
-                      Cancel
-                    </Button>
-                  </div>
-                </div>
-              )}
-            </div>
-          </Form.Group>
-
-          {/**LASTNAME */}
-
-          <Form.Group
-            className="mb-2 d-flex flex-column "
-            controlId="formBasicEmail"
-          >
-            <div className="d-flex gap-2">
-              <div className="editLabel2 rounded text-black">Lastname</div>
-
-              {!editLastName ? (
-                <Form.Label className="editLabel rounded  d-flex justify-content-between align-items-center ">
-
-                  {currentUser.lastName[0].toUpperCase()}
-                  {currentUser.lastName.slice(1)}{" "}
-
-                  <Button
-                    className={`editİcon text-dark  border-0 ms-5 p-0 ${display}`}
-                    onClick={handleClickLN}
-                  >
-                    <GoPencil className="mb-1 me-1 text-primary "/>
-                    </Button>
-                </Form.Label>
-              ) : (
-                <div className="d-flex flex-column">
-                  <Form.Control
-                    type="text"
-                    placeholder=""
-                    className="editFormControl border border-0 rounded rounded-0 "
-                    defaultValue=""
-                    onChange={(e) => handleChangeLN(e)}
-                  />
-
-
-<Form.Text className={`formText text-start ${formTextClassName} `}>{messageLN}</Form.Text>
-
-                  <div className="d-flex gap-1 mt-2">
-                
-
-
-                    <Button
-                      className="py-1 m-0 px-4"
-                      onClick={handleClickLNSend}
-                      disabled={isAvailableLN}
-                      size="sm"
-                    >
-Update         
-           </Button>
-                    <Button
-                                        variant="danger"
-
-                      className="py-1 m-0 px-4"
-                      onClick={handleClickLNAbort}
-                      size="sm"
-                    >
-                      Cancel
-                    </Button>
-                  </div>
-                </div>
-              )}
-            </div>
-          </Form.Group>
-
-          {/**EMAİL */}
-          <Form.Group
-            className="mb-2 d-flex flex-column "
-            controlId="formBasicEmail"
-          >
-            <div className="d-flex gap-2">
-              <Form.Label className="editLabel2 rounded text-black">Email</Form.Label>
-
-              {!editEmail ? (
-                <Form.Label className="editLabel rounded  d-flex justify-content-between align-items-center">
-                  {e}
-                  <Button
-                    className={`editİcon text-dark border-0 p-0 ${display}`}
-                    onClick={handleClickE}
-                  >
-                    <GoPencil className="mb-1 me-1 text-primary "/>
-                    </Button>
-                </Form.Label>
-              ) : (
-                <div className="d-flex flex-column ">
+                  </Form.Label>
+                ) : (
                   <div className="d-flex flex-column ">
+                    <div className="d-flex">
+                      <Form.Control
+                        type="text"
+                        placeholder="Enter your username"
+                        className="editFormControl border border-0 rounded rounded-0  "
+                        defaultValue=""
+                        onChange={(e) => handleChangeUN(e)}
+                      />
+                    </div>
+
+                    <Form.Text
+                      className={`formText text-start ${formTextClassName} `}
+                    >
+                      {messageUN}
+                    </Form.Text>
+
+                    <div className="d-flex mt-1 gap-1">
+                      <Button
+                        className=" m-0 px-4 py-1"
+                        onClick={handleClickUNSend}
+                        disabled={isAvailableUN}
+                        size="dm"
+                      >
+                        Update
+                      </Button>
+                      <Button
+                        variant="danger"
+                        className="py-1 m-0 px-4"
+                        onClick={handleClickUNAbort}
+                        size="sm"
+                      >
+                        Cancel
+                      </Button>
+                    </div>
+                    <div></div>
+                  </div>
+                )}
+              </div>
+            </Form.Group>
+            {/**FİRSTNAME */}
+
+            <Form.Group
+              className="mb-2 d-flex flex-column "
+              controlId="formBasicEmail"
+            >
+              <div className="d-flex gap-2">
+                <Form.Label className="editLabel2 rounded text-black ">
+                  Firstname
+                </Form.Label>
+
+                {!editFirstName ? (
+                  <Form.Label className="editLabel rounded d-flex justify-content-between align-items-center">
+                    {currentUser.firstName[0].toUpperCase()}
+                    {currentUser.firstName.slice(1)}{" "}
+                    <Button
+                      className={`editİcon text-dark border-0 ms-5 p-0 ${display}`}
+                      onClick={handleClickFN}
+                    >
+                      <GoPencil className="mb-1 me-1 text-primary " />
+                    </Button>
+                  </Form.Label>
+                ) : (
+                  <div className="d-flex flex-column">
                     <Form.Control
                       type="text"
                       placeholder=""
-                      className="editFormControl border border-0 rounded rounded-0 "
+                      className="editFormControl border border-0 rounded rounded-0   "
                       defaultValue=""
-                      onChange={(e) => handleChangeE(e)}
+                      onChange={(e) => handleChangeFN(e)}
+                    />
 
+                    <Form.Text
+                      className={`formText text-start ${formTextClassName} `}
+                    >
+                      {messageFN}
+                    </Form.Text>
 
-                    /><Form.Text className={`formText text-start ${formTextClassName} `}>{messageE}</Form.Text>
-                    <div className="d-flex mt-1 gap-1">
+                    <div className="d-flex  gap-1 mt-2">
                       <Button
-                        className="p-0 m-0 px-4"
-                        onClick={handleClickESend}
-                        disabled={isAvailableE}
+                        className="py-1 m-0 px-4"
+                        onClick={handleClickFNSend}
+                        disabled={isAvailableFN}
                         size="sm"
                       >
-Update                      </Button>
+                        Update
+                      </Button>
                       <Button
-                                          variant="danger"
-
-                        className="py-1m-0 px-4"
-                        onClick={handleClickEAbort}
+                        variant="danger"
+                        className="py-1 m-0 px-4"
+                        onClick={handleClickFNAbort}
                         size="sm"
                       >
                         Cancel
                       </Button>
                     </div>
                   </div>
-                  
-                  <div></div>
-                </div>
-              )}
-            </div>
-          </Form.Group>
+                )}
+              </div>
+            </Form.Group>
 
-          {/**PASSWORD */}
+            {/**LASTNAME */}
 
-          <Form.Group
-            className="mb-2 d-flex flex-column"
-            controlId="formBasicEmail"
-          >
-            <div className="d-flex gap-2">
-              <Form.Label className="editLabel2 rounded text-black  ">
-                Password
-              </Form.Label>
+            <Form.Group
+              className="mb-2 d-flex flex-column "
+              controlId="formBasicEmail"
+            >
+              <div className="d-flex gap-2">
+                <div className="editLabel2 rounded text-black">Lastname</div>
 
-              {!editPassword ? (
-                <Form.Label className="editLabel rounded  d-flex justify-content-between align-items-center">
-                  {pStar}
-                  <Button
-                    className={`editİcon text-dark border-0 ms-5 p-0 ${display}`}
-                    onClick={handleClickP}
-                  >
-                    <GoPencil className="mb-1 me-1 text-primary "/>
+                {!editLastName ? (
+                  <Form.Label className="editLabel rounded  d-flex justify-content-between align-items-center ">
+                    {currentUser.lastName[0].toUpperCase()}
+                    {currentUser.lastName.slice(1)}{" "}
+                    <Button
+                      className={`editİcon text-dark  border-0 ms-5 p-0 ${display}`}
+                      onClick={handleClickLN}
+                    >
+                      <GoPencil className="mb-1 me-1 text-primary " />
                     </Button>
+                  </Form.Label>
+                ) : (
+                  <div className="d-flex flex-column">
+                    <Form.Control
+                      type="text"
+                      placeholder=""
+                      className="editFormControl border border-0 rounded rounded-0 "
+                      defaultValue=""
+                      onChange={(e) => handleChangeLN(e)}
+                    />
+
+                    <Form.Text
+                      className={`formText text-start ${formTextClassName} `}
+                    >
+                      {messageLN}
+                    </Form.Text>
+
+                    <div className="d-flex gap-1 mt-2">
+                      <Button
+                        className="py-1 m-0 px-4"
+                        onClick={handleClickLNSend}
+                        disabled={isAvailableLN}
+                        size="sm"
+                      >
+                        Update
+                      </Button>
+                      <Button
+                        variant="danger"
+                        className="py-1 m-0 px-4"
+                        onClick={handleClickLNAbort}
+                        size="sm"
+                      >
+                        Cancel
+                      </Button>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </Form.Group>
+
+            {/**EMAİL */}
+            <Form.Group
+              className="mb-2 d-flex flex-column "
+              controlId="formBasicEmail"
+            >
+              <div className="d-flex gap-2">
+                <Form.Label className="editLabel2 rounded text-black">
+                  Email
                 </Form.Label>
-              ) : (
-                <div className="d-flex flex-column ">
+
+                {!editEmail ? (
+                  <Form.Label className="editLabel rounded  d-flex justify-content-between align-items-center">
+                    {e}
+                    <Button
+                      className={`editİcon text-dark border-0 p-0 ${display}`}
+                      onClick={handleClickE}
+                    >
+                      <GoPencil className="mb-1 me-1 text-primary " />
+                    </Button>
+                  </Form.Label>
+                ) : (
+                  <div className="d-flex flex-column ">
+                    <div className="d-flex flex-column ">
+                      <Form.Control
+                        type="text"
+                        placeholder=""
+                        className="editFormControl border border-0 rounded rounded-0 "
+                        defaultValue=""
+                        onChange={(e) => handleChangeE(e)}
+                      />
+                      <Form.Text
+                        className={`formText text-start ${formTextClassName} `}
+                      >
+                        {messageE}
+                      </Form.Text>
+                      <div className="d-flex mt-1 gap-1">
+                        <Button
+                          className="p-0 m-0 px-4"
+                          onClick={handleClickESend}
+                          disabled={isAvailableE}
+                          size="sm"
+                        >
+                          Update{" "}
+                        </Button>
+                        <Button
+                          variant="danger"
+                          className="py-1m-0 px-4"
+                          onClick={handleClickEAbort}
+                          size="sm"
+                        >
+                          Cancel
+                        </Button>
+                      </div>
+                    </div>
+
+                    <div></div>
+                  </div>
+                )}
+              </div>
+            </Form.Group>
+
+            {/**PASSWORD */}
+
+            <Form.Group
+              className="mb-2 d-flex flex-column"
+              controlId="formBasicEmail"
+            >
+              <div className="d-flex gap-2">
+                <Form.Label className="editLabel2 rounded text-black  ">
+                  Password
+                </Form.Label>
+
+                {!editPassword ? (
+                  <Form.Label className="editLabel rounded  d-flex justify-content-between align-items-center">
+                    {pStar}
+                    <Button
+                      className={`editİcon text-dark border-0 ms-5 p-0 ${display}`}
+                      onClick={handleClickP}
+                    >
+                      <GoPencil className="mb-1 me-1 text-primary " />
+                    </Button>
+                  </Form.Label>
+                ) : (
+                  <div className="d-flex flex-column ">
+                    <div className="d-flex">
+                      <Form.Control
+                        type={inputType}
+                        className="editFormControlPassword border border-0 rounded rounded-0 "
+                        defaultValue=""
+                        onChange={handlePasswordChange}
+                      />
+
+                      <button
+                        className="hideShowButton bg-white border border-0 "
+                        type="button"
+                        onClick={(e) => togglePasswordVisibility(e)}
+                      >
+                        {inputType === "password" ? (
+                          <IoMdEye />
+                        ) : (
+                          <IoMdEyeOff />
+                        )}
+                      </button>
+                    </div>
+                    <Form.Text
+                      className={`formText text-start ${formTextClassName} `}
+                    >
+                      {messageP}
+                    </Form.Text>
+
+                    <div className="d-flex mt-1 gap-1">
+                      <Button
+                        className="p-0 m-0 px-4"
+                        onClick={handleClickPSend}
+                        disabled={isAvailableP}
+                        size="sm"
+                      >
+                        Update
+                      </Button>
+                      <Button
+                        variant="danger"
+                        className="py-1 m-0 px-4"
+                        onClick={handleClickPAbort}
+                        size="sm"
+                      >
+                        Cancel
+                      </Button>
+                    </div>
+
+                    <div></div>
+                  </div>
+                )}
+              </div>
+            </Form.Group>
+            <Form.Group className="groupDelete p-1 rounded text-start mt-2 ">
+              {!isClickDelete && (
+                <Button
+                  variant="danger"
+                  className={`${display} py-2 ms-2 mt-4 `}
+                  onClick={handleClickDelete}
+                  size="sm"
+                >
+                  Delete My Account
+                </Button>
+              )}
+              {isClickDelete && (
+                <span className="d-flex flex-column gap-1">
+                  <span className="deleteMessage p-2 bg-light">
+                    {deleteMessage}
+                  </span>
+
                   <div className="d-flex">
                     <Form.Control
                       type={inputType}
-                      className="editFormControlPassword border border-0 rounded rounded-0 "
-                      defaultValue=""
-                      onChange={handlePasswordChange}
-
+                      className="deleteFormControl border border-0 rounded rounded-0 bg-white"
+                      onChange={(e) => handleChangeDelete(e)}
                     />
 
                     <button
-                      className="hideShowButton bg-white border border-0 "
-                      type="button"
-                      onClick={(e) => togglePasswordVisibility(e)}
+                      type="button "
+                      className="bg-white border border-0 fs-5 "
+                      onClick={togglePasswordVisibility}
                     >
                       {inputType === "password" ? <IoMdEye /> : <IoMdEyeOff />}
                     </button>
-                  </div>             
-                       <Form.Text className={`formText text-start ${formTextClassName} `}>{messageP}</Form.Text>
+                  </div>
 
-                  <div className="d-flex mt-1 gap-1">
+                  <span className="mt-1">
                     <Button
-                      className="p-0 m-0 px-4"
-                      onClick={handleClickPSend}
-                      disabled={isAvailableP}
+                      className=""
+                      onClick={handleClickDeleteOperation}
                       size="sm"
+                      disabled={controlDisabled}
                     >
-
-
-                     Update
+                      Delete Account
                     </Button>
                     <Button
-                    variant="danger"
-                      className="py-1 m-0 px-4"
-                      onClick={handleClickPAbort}
+                      variant="danger"
+                      className="ms-1"
+                      onClick={handleClickCancelDelete}
                       size="sm"
                     >
                       Cancel
                     </Button>
-
-                  </div>
-
-                  <div></div>
-                </div>
+                  </span>
+                </span>
               )}
-            </div>
-          </Form.Group>
-          <Form.Group className="groupDelete p-1 rounded text-start mt-2 ">
-            {!isClickDelete && (
-              <Button
-                variant="danger"
-                className={`${display} py-2 ms-2 mt-4 `}
-                onClick={handleClickDelete}
-                size="sm"
-              >
-                Delete My Account
-              </Button>
-            )}
-            {isClickDelete && (
-              <span className="d-flex flex-column gap-1">
-                <span className="deleteMessage p-2 bg-light">
-                  {deleteMessage}
-                </span>
-
-                <div className="d-flex">
-                  <Form.Control
-                    type={inputType}
-                    className="deleteFormControl border border-0 rounded rounded-0 bg-white"
-                    onChange={(e) => handleChangeDelete(e)}
-
-                  />
-
-                  <button
-                    type="button "
-                    className="bg-white border border-0 fs-5 "
-                    onClick={togglePasswordVisibility}
-                  >
-                    {inputType === "password" ? <IoMdEye /> : <IoMdEyeOff />}
-                  </button>
-                </div>
-
-                <span className="mt-1">
-                  <Button className="" onClick={handleClickDeleteOperation} size="sm" disabled={controlDisabled} >
-                    Delete Account
-                  </Button>
-                  <Button                     variant="danger"
- className="ms-1" onClick={handleClickCancelDelete} size="sm">
-                    Cancel
-                  </Button>
-                </span>
-              </span>
-            )}
-          </Form.Group>
-        </Form>
-      </Container>
+            </Form.Group>
+          </Form>
+        </Container>
       </Container>
     );
 };
